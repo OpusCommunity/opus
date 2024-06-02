@@ -1,0 +1,11 @@
+{
+    "[rust]": {
+        "files.autoSave": "off",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.suggestSelection": "first",
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.inlayHints.enabled": "offUnlessPressed",
+    },
+    "files.eol": "\n"
+}

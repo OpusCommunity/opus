@@ -1,0 +1,22 @@
+[package]
+name = "connection"
+version = "0.0.1"
+description = "connection plugin"
+authors = ["We"]
+edition = "2021"
+rust-version = "1.78.0"
+readme = ""
+license = "MIT"
+links = "connection"
+
+# 設定オプションは次のURLを参照: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-plugin = { workspace = true, features = ["build"] }
+
+[dependencies]
+tauri = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+chrono = { workspace = true }

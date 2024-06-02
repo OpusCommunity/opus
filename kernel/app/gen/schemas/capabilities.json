@@ -1,0 +1,1 @@
+{"main-capability":{"identifier":"main-capability","description":"Capability for the main window","local":true,"windows":["main"],"permissions":["log:default","autostart:allow-enable","autostart:allow-disable","autostart:allow-is-enabled","state:allow-greet","connection:allow-call"],"platforms":["macOS","windows"]}}

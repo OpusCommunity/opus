@@ -1,0 +1,49 @@
+{
+  "productName": "opus",
+  "version": "0.0.1",
+  "identifier": "opus",
+  "build": {
+    "beforeDevCommand": "npm run start -- --host $HOST --public-host $HOST",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../../dist/opus/browser"
+  },
+  "plugins": {
+    "shell": {
+      "open": true
+    }
+  },
+  "app": {
+    "windows": [
+      {
+        "decorations": true,
+        "fullscreen": false,
+        "minWidth": 940,
+        "minHeight": 500,
+        "width": 1280,
+        "height": 720,
+        "focus": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "silent": true,
+        "type": "offlineInstaller"
+      }
+    }
+  }
+}

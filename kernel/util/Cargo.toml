@@ -1,0 +1,13 @@
+[package]
+name = "util"
+version = "0.0.1"
+description = "opus util source"
+authors = ["We"]
+edition = "2021"
+rust-version = "1.78.0"
+readme = ""
+license = "MIT"
+
+# 設定オプションは次のURLを参照: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

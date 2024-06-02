@@ -1,0 +1,22 @@
+[package]
+name = "error"
+version = "0.0.1"
+description = "opus error source"
+authors = ["We"]
+edition = "2021"
+rust-version = "1.78.0"
+readme = ""
+license = "MIT"
+
+# 設定オプションは次のURLを参照: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = { workspace = true }
+chrono = { workspace = true }
+derive-new = { workspace = true }
+uuid = { workspace = true, features = ["v4"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+keyring = "2.3.3"

@@ -1,0 +1,80 @@
+/** TSConfig設定は次のURLを参照: https://www.typescriptlang.org/tsconfig#allowUnreachableCode*/
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    /* 型チェック */
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "useUnknownInCatchVariables": true,
+
+    /* モジュール */
+    "allowArbitraryExtensions": false,
+    "allowImportingTsExtensions": false,
+    "allowUmdGlobalAccess": false,
+    "baseUrl": "./",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "rootDir": "ui/",
+    "sourceMap": true,
+
+    /* イベント通知 */
+    "declaration": false,
+    "emitBOM": false,
+    "importHelpers": true,
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "outDir": "./dist/out-tsc",
+    "removeComments": true,
+    "stripInternal": false,
+
+    /* 言語サポート */
+    "allowJs": false,
+    "checkJs": false,
+
+    /* エディタサポート */
+    "disableSizeLimit": true,
+    "plugins": [
+      {
+        "name": "@styled/typescript-styled-plugin"
+      }
+    ],
+
+    /* 相互運用制約 */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    /* 下位互換性 */
+    "keyofStringsOnly": false,
+
+    /* 環境設定 */
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "dom", "DOM.Iterable"],
+    "paths": {
+      "@/*": ["ui/*"],
+      "@opus-api/*": ["ui/app/api/*"],
+      "@config/*": ["config/*"]
+    }
+  },
+  /** Angular コンパイラオプションは次のURLを参照: https://angular.jp/guide/angular-compiler-options*/
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "include": ["ui/*", "eslintrc.cjs"]
+}
