@@ -43,22 +43,9 @@ pub fn setup() {
             tauri_plugin_window_state::Builder::new()
                 .with_state_flags(StateFlags::all())
                 .build(),
-            // decoratoinのフラグを変更する必要あり
-            // Returns the path to the user's config directory.
-            //
-            // The returned value depends on the operating system and is either a `Some`, containing a value from the following table, or a `None`.
-            //
-            // |Platform | Value                                 | Example                          |
-            // | ------- | ------------------------------------- | -------------------------------- |
-            // | Linux   | `$XDG_CONFIG_HOME` or `$HOME`/.config | /home/alice/.config              |
-            // | macOS   | `$HOME`/Library/Application Support   | /Users/Alice/Library/Application Support |
-            // | Windows | `{FOLDERID_RoamingAppData}`           | C:\Users\Alice\AppData\Roaming   |
-            // pub fn config_dir() -> Option<PathBuf> {
-            //     sys::config_dir()
-            // }
         )
         .plugin(state::Builder::default().build())
-        .plugin(connection::Builder::default().build())
+        .plugin(grpc::Builder::default().build())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -12,8 +12,10 @@
 
   <form
     class="row"
-    (submit)="greet($event, greetInput.value); get_autostart_enabled($event)">
+    (submit)="greet($event, greetInput.value); init_connection($event, addrInput.value, portInput.value); get_autostart_enabled($event)">
     <input #greetInput id="greet-input" placeholder="Enter a name..." />
+    <input #addrInput id="addr-input" placeholder="IP address..." />
+    <input #portInput id="port-input" placeholder="Port..." />
     <button type="submit">Greet</button>
   </form>
   <p>{{ greetingMessage }}</p>
