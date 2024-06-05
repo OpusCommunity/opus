@@ -409,40 +409,6 @@
           ]
         },
         {
-          "type": "string",
-          "enum": [
-            "connection:default"
-          ]
-        },
-        {
-          "description": "connection:allow-call -> Enables the call command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "connection:allow-call"
-          ]
-        },
-        {
-          "description": "connection:allow-greet -> Enables the greet command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "connection:allow-greet"
-          ]
-        },
-        {
-          "description": "connection:deny-call -> Denies the call command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "connection:deny-call"
-          ]
-        },
-        {
-          "description": "connection:deny-greet -> Denies the greet command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "connection:deny-greet"
-          ]
-        },
-        {
           "description": "event:default -> Default permissions for the plugin.",
           "type": "string",
           "enum": [
@@ -503,6 +469,26 @@
           "type": "string",
           "enum": [
             "event:deny-unlisten"
+          ]
+        },
+        {
+          "type": "string",
+          "enum": [
+            "grpc:default"
+          ]
+        },
+        {
+          "description": "grpc:allow-init-connection -> Enables the init_connection command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "grpc:allow-init-connection"
+          ]
+        },
+        {
+          "description": "grpc:deny-init-connection -> Denies the init_connection command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "grpc:deny-init-connection"
           ]
         },
         {
@@ -1307,24 +1293,10 @@
           ]
         },
         {
-          "description": "state:allow-call -> Enables the call command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "state:allow-call"
-          ]
-        },
-        {
           "description": "state:allow-greet -> Enables the greet command without any pre-configured scope.",
           "type": "string",
           "enum": [
             "state:allow-greet"
-          ]
-        },
-        {
-          "description": "state:deny-call -> Denies the call command without any pre-configured scope.",
-          "type": "string",
-          "enum": [
-            "state:deny-call"
           ]
         },
         {

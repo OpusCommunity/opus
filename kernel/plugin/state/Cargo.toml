@@ -1,0 +1,22 @@
+[package]
+name = "state"
+version = "0.0.1"
+description = "state plugin."
+authors = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
+links = "state"
+
+# 設定オプションは次のURLを参照: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-plugin = { workspace = true, features = ["build"] }
+
+[dependencies]
+tauri = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+chrono = { workspace = true }

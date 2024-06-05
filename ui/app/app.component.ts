@@ -1,3 +1,7 @@
+/**--------------------------------------------------------------------------------------------------
+ *   Copyright (c) OpusCommunity. All rights reserved.
+ *   Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------------*/
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -27,10 +31,12 @@ export class AppComponent {
     invoke<string>('plugin:state|greet', { name }).then((text) => {
       this.greetingMessage = text;
     });
+  }
 
-    invoke<string>('plugin:connection|call', {}).then((text) => {
-      console.log(text);
-    });
+  init_connection(event: SubmitEvent, addr: string, port: string): void {
+    event.preventDefault();
+
+    invoke('plugin:grpc|init_connection', { addr, port }).then(() => {});
   }
 
   async get_autostart_enabled(event: SubmitEvent): Promise<void> {

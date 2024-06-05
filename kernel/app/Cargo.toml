@@ -2,11 +2,11 @@
 name = "app"
 version = "0.0.1"
 description = "opus app source"
-authors = ["We"]
-edition = "2021"
-rust-version = "1.78.0"
-readme = ""
-license = "MIT"
+authors = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
 
 # 設定オプションは次のURLを参照: https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -30,5 +30,5 @@ tauri-plugin-shell = "2.0.0-beta"
 tauri-plugin-window-state = "2.0.0-beta"
 tauri-plugin-single-instance = "2.0.0-beta"
 tauri-plugin-sql = { version = "2.0.0-beta", features = ["sqlite"] }
-state = { path = "../plugin/local/state" }
-connection = { path = "../plugin/server/connection" }
+state = { path = "../plugin/state" }
+grpc = { path = "../plugin/grpc" }

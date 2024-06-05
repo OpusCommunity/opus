@@ -1,7 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["app", "cli", "util", "error", "adapter", "service", "model"]
-nested = { path = "plugin" }
+members = ["app", "plugin/*"]
 
 [workspace.package]
 version = "0.0.1"
@@ -10,6 +9,7 @@ authors = ["We"]
 edition = "2021"
 rust-version = "1.78.0"
 readme = "../README.md"
+repository = "https://github.com/OpusCommunity/opus"
 license = "MIT"
 
 [profile.release]
